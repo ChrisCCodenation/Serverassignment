@@ -2,8 +2,13 @@
 const { Sequelize } = require("sequelize");
 
 // New Sequelize URI from .env.
-const SQLconnection = new Sequelize(process.env.MYSQL_URI);
-
+const SQLconnection = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {host: process.env.DB_HOST,
+  dialect: process.env.DIALECT}
+);
 try {
   
 // Authenticate to database
