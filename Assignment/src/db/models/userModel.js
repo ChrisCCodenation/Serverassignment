@@ -1,6 +1,6 @@
 // For table fields and formatting.
 const SQLconnection = require("../connection");
-
+const {DataTypes}= require("sequelize")
 // User model form database.
 const User = SQLconnection.define("User", {
   

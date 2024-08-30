@@ -16,7 +16,7 @@ async function registerUser(req, res) {
     });
 
 // Show assigned code for created user.
-    res.status(201).send(`User ${req.body.username} has been created.`);
+    res.status(201).json({message:`User ${req.body.username} has been created.`});
   } catch (error) {
     
 // Show errors
